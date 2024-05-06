@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:'sora', 'sans-serif';
+}
+:root{
+    --buttonColor:#25D366;
+    --buttonHover:#075E54;
+    --darkGreen:#2D6218;
+    --blue:#04265E;
+}
+body{
+    padding:24px;
+}
+
+
+
+.simulatorContainer{
+    display:flex;
+    flex-direction: column;
+    color: white;
+    background-color:#0b3379;
+    border-radius:20px;
+}
+
+.precnetText{
+    background-color: #04A5FF;
+    border-radius: 45px;
+    padding: 1.6%;
+    padding-right: 5%;
+    padding-left: 5%;
+    font-weight: bold;
+}
+
+
+.lcilcaText{
+    background-color: #90d55e;
+    border-radius: 45px;
+    padding: 1.7%;
+    padding-right: 6%;
+    padding-left: 6%;
+    font-weight: bold;
+
+}
+    
+.lciLcaValue{
+    margin-left: 10px;
+
+}
+.cdbText{
+    background-color: #90d55e;
+    border-radius: 45px;
+    z-index: 1;
+    padding: 1.6%;
+    padding-right: 11%;
+    padding-left: 11%;
+    font-weight: bold;
+    
+}
+
+.cdbValue{
+    margin-left: 10px;
+}
+   
+
+.precnetValue{
+    margin-left: 10px;
+}
+
+#simulatorContainer .hidden{
+    display:none;
+    visibility:hidden;
+}
+#simulatorContainer h3{
+    font-size: 24px;
+    color:#474747;
+}
+#simulatorContainer .simulatorBody{
+    padding:20px;
+    min-height:250px;
+    height:100%;
+    max-width:1200px;
+
+}
+#simulatorContainer input[type='radio']{
+    width:16px;
+}
+#simulatorContainer .row{
+    display:flex;
+    margin:24px 0;
+}
+
+#simulatorContainer .col{
+    flex-direction:column;
+    padding:12px;
+}
+
+#simulatorContainer .col50{
+    width:50%;
+}
+
+#simulatorContainer .col100{
+    width:100%;
+}
+#simulatorContainer .monthList{
+    font-size:12px;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+}
+#simulatorContainer .rightCol{
+    display:flex;
+    justify-content:space-between;
+   
+}
+
+.monthPaymentAndList{
+    border: 1.5px solid #0968bc;
+    border-radius: 10px;
+    padding: 3%;
+    width: 100%;
+}
+
+#simulatorContainer .userInputData{
+    margin-bottom:24px;
+    display:flex;
+    flex-direction:column;
+}
+#simulatorContainer .userInputData label{
+    margin-right:12px;
+}
+#simulatorContainer .inputIdentifier{
+    margin-right:8px;
+    margin-bottom:5px;
+    font-weight:700;
+    font-size:20px;
+}
+#simulatorContainer .chartContainer{
+    
+    height:120px;
+    margin-top:24px;
+}
+
+.chartContainer > h3{
+    
+    color: white!important;
+}
+#simulatorContainer .chart {
+    
+    border: 1.5px solid #0968bc;
+    border-radius: 10px;
+    padding: 1.5%;
+    
+}
+
+
+
+
+.bar {
+    display:flex;
+    align-items:center;
+    
+    height: 100%;
+    flex-grow: 1;
+    transition: width 0.5s ease;
+    margin: 12px 0;
+    border-radius: 20px;
+    max-width: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.1); /* Adicionando um tom de cinza claro */
+    overflow: hidden; /* Para ocultar o texto que se estende além da barra */
+}
+
+.bar .value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333; /* Mudando a cor do texto para um tom mais escuro */
+    font-size: 12px; /* Ajustando o tamanho da fonte */
+    font-weight: bold; /* Deixando o texto em negrito */
+    white-space: nowrap; /* Impedindo que o texto quebre em várias linhas */
+    padding: 2px 6px; /* Adicionando um espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.8); /* Adicionando um fundo branco translúcido */
+    border-radius: 10px; /* Arredondando as bordas do texto */
+}
+
+.quotaInformationContainer{
+    text-align:center;
+}
+
+#precnet {
+    height: 30px;
+    background-color: #384DBA;
+}
+
+#cdb {
+    
+    height: 30px;
+    background-color: #6A976C;
+}
+
+#lci-lca {
+    
+    height: 30px;
+    background-color: #6A976C;
+}
+
+
+#amountInvested{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #90d55e;
+    color: white;
+    background-color: #0b3379;
+    padding:6px 12px;
+    width:80%;
+    outline: none;
+    
+    
+}
+
+
+
+
+#monthOfPayment{
+    width: 100%!important;
+    height: 5px!important;
+    
+    margin-top:12px;
+    
+}
+
+#monthOfPayment::-webkit-slider-thumb{
+    background: #90d55e!important;
+    box-shadow: 0 0 10px 3px  #90d55e;
+    height: 15px!important;
+    width: 15px!important;
+}
+
+
+
+#simulatorContainer .inputAndLabelContainer{
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    padding: 2%;
+    margin-right: 15px;
+    display:flex;
+    flex-wrap:nowrap;
+}
+
+.inputAndLabelContainerSelected{
+
+    border: 1px solid #90d55e;
+    
+}
+
+#simulatorContainer .inputAndLabelContainer input{
+    margin-right:5px;
+}
+#simulatorContainer .inputContainer{
+    display:flex;
+}
+#simulatorContainer .instructionContainer{
+    width:100%;
+    margin-top:24px;
+}
+#simulatorContainer .monthContainer{
+    font-weight:700;
+}
+#simulatorContainer .selectedMonthContainer{
+    display:none;
+    visibility:hidden;
+}
+#simulatorContainer .monthOfPaymentTitle{
+    font-size:20px;
+}
+@media(max-width:768px){
+    #simulatorContainer .row{
+        flex-direction:column;
+    }
+
+    #simulatorContainer .col{
+        width:100%;
+    }
+}
+
+@media(max-width:550px){
+    #simulatorContainer .inputContainer{
+        flex-direction:column;
+    }
+    #simulatorContainer .validityYearText{
+        display:block;
+    }
+    #simulatorContainer .monthList{
+        font-size:8px;
+    }
+    #simulatorContainer .monthRowContainer{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+    #simulatorContainer .monthContainer{
+        width:80%;
+    }
+    #simulatorContainer .monthList{
+        display:none;
+        visibility:hidden;
+    }
+    #simulatorContainer .selectedMonthContainer{
+        display:inline-block;
+        visibility:visible;
+    }
+    #simulatorContainer #selectedMonth{
+        color:#206218;
+        font-weight:bold;
+    }
+    #simulatorContainer .monthOfPaymentTitle{
+        font-size:16px;
+    }
+    #simulatorContainer .inputIdentifier{
+        font-size:16px;
+    }
+    #simulatorContainer h3{
+        font-size:18px;
+    }
+    #simulatorContainer .bar{
+        max-width:300px;
+    }
+    
+}
+@media(max-width:300px){
+    #simulatorContainer .bar{
+      max-width:224px;
+  } 
+}
+
+#simulatorContainer input[type="range"] {
+    /* Remove estilos padrão */
+    -webkit-appearance: none;
+    -moz-apperance: none;
+    appearance: none;
+    /* Dimensões e layout */
+    width: 100%;
+    height: 20px;
+    /* Track */
+    background-color: #ccc; /* Cor de fundo cinza */
+    border-radius: 10px;
+    /* Thumb (alça) */
+    cursor: pointer;
+  }
+
+  #simulatorContainer input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    /* Dimensões e layout */
+    width: 20px;
+    height: 20px;
+    background-color: #04265E; /* Cor da bola */
+    border-radius: 50%; /* Forma circular */
+  }
+
+  #simulatorContainer input[type="range"]::-moz-range-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    /* Dimensões e layout */
+    width: 20px;
+    height: 20px;
+    background-color: #04265E; /* Cor da bola */
+    border-radius: 50%; /* Forma circular */
+  }
